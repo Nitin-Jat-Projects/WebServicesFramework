@@ -1,6 +1,21 @@
 package com.thinking.machines.webrock.scopes;
+
 public class RequestScope
 {
-//Dakshesh will be working on this module adding properties and methods
-//according to future guidelines
+    private HttpRequest httpRequest;
+
+    // constructor
+    public RequestScope(HttpRequest httpRequest) {
+        this.httpRequest = httpRequest;
+    }
+
+    // method to set attribute
+    public void setAttribute(String key, Object value) {
+        httpRequest.setAttribute(key, value);
+    }
+
+    // method to get attribute
+    public Object getAttribute(String key) {
+        return httpRequest.getAttribute(key);
+    }
 }
