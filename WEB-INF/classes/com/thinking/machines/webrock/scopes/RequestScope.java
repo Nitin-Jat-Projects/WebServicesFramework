@@ -1,21 +1,18 @@
 package com.thinking.machines.webrock.scopes;
 
-public class RequestScope
-{
-    private HttpRequest httpRequest;
+import java.util.HashMap;
+import java.util.Map;
 
-    // constructor
-    public RequestScope(HttpRequest httpRequest) {
-        this.httpRequest = httpRequest;
-    }
+public class HttpRequest {
+    private Map<String, Object> attributes = new HashMap<>();
 
-    // method to set attribute
     public void setAttribute(String key, Object value) {
-        httpRequest.setAttribute(key, value);
+        attributes.put(key, value);
     }
 
-    // method to get attribute
     public Object getAttribute(String key) {
-        return httpRequest.getAttribute(key);
+        return attributes.get(key);
     }
 }
+
+
