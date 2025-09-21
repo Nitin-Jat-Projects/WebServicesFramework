@@ -3,7 +3,7 @@ package com.thinking.machines.webrock.scopes;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HttpRequest {
+class HttpRequest {
     private Map<String, Object> attributes = new HashMap<>();
 
     public void setAttribute(String key, Object value) {
@@ -14,5 +14,3 @@ public class HttpRequest {
         return attributes.get(key);
     }
 }
-
-
